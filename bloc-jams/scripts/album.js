@@ -53,8 +53,11 @@ var createSongRow = function(songNumber, songName, songLength) {
       ;
  
     var $row = $(template);
+     $row.find('.song-item-number').click(clickHandler);
+     $row.hover(onHover, offHover);
+    return $row;
 };
-    
+
  var onHover = function(event) {
         var songNumberCell = $(this).find('.song-item-number');
         var songNumber = songNumberCell.attr('data-song-number');
@@ -97,8 +100,18 @@ var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
  };
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
  
  $(document).ready(function() {
      setCurrentAlbum(albumPicasso);
      
      });
+
+ $(document).ready(function() {
+     setCurrentAlbum(albumPicasso);
+     for (var i = 0; i < songRows.length; i++) {
+         songRows[i].addEventListener('click', function(event) {
+             clickHandler(event.target);
+         });
+     }
+ });
