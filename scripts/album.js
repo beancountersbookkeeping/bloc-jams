@@ -155,7 +155,7 @@ var filterTimeCode = function(timeInSeconds) {
 
 var updateSeekBarWhileSongPlays = function() {
      if (currentSoundFile) {
-        currentSoundFile.bind('timeupdate', function(event) {
+        currentSoundFile.bind('.timeupdate', function(event) {
             var currentTime = this.getTime();
             var songLength = this.getDuration();
             var seekBarFillRatio = currentTime / songLength;
