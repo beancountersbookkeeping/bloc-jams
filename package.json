@@ -1,7 +1,6 @@
 {
   "name": "npm_test",
   "version": "1.0.0",
-  "description": "",
   "main": "clear",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/beancountersbookkeeping/bloc-jams/issues"
   },
-  "homepage": "https://github.com/beancountersbookkeeping/bloc-jams#readme"
+  "homepage": "https://github.com/beancountersbookkeeping/bloc-jams#readme",
+  "description": ""
 }
